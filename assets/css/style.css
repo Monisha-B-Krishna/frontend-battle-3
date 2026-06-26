@@ -100,3 +100,66 @@ h1, h2, h3, h4, h5, h6 {
   fill: var(--forsythia);
   stroke: none;
 }
+
+/* =============================================
+   NAVBAR
+   ============================================= */
+#mainNav {
+  background-color: rgba(23, 43, 54, 0.85);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 200, 1, 0.1);
+  padding: 1rem 0;
+  transition: background-color var(--transition-layout);
+  z-index: 1000;
+}
+
+#mainNav.scrolled {
+  background-color: rgba(17, 76, 90, 0.97);
+  border-bottom: 1px solid rgba(255, 200, 1, 0.25);
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--arctic-powder);
+  letter-spacing: -0.5px;
+}
+
+.navbar-nav .nav-link {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--mystic-mint);
+  padding: 0.5rem 0.75rem;
+  transition: color var(--transition-micro);
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--forsythia);
+}
+
+.nav-signin {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--mystic-mint);
+  text-decoration: none;
+  transition: color var(--transition-micro);
+}
+
+.nav-signin:hover {
+  color: var(--forsythia);
+}
+
+.navbar-toggler {
+  background: transparent;
+  border: 1px solid rgba(255,200,1,0.3);
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
