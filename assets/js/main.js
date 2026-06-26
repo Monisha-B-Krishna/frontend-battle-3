@@ -238,3 +238,11 @@ document.querySelectorAll('.faq-trigger').forEach(trigger => {
     }
   });
 });
+
+// Testimonial switcher
+function switchReview(index) {
+  document.querySelectorAll('.trust-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.review-card').forEach(r => r.classList.remove('active'));
+  document.querySelector(`.trust-btn[data-review="${index}"]`).classList.add('active');
+  document.querySelector(`.review-card[data-review="${index}"]`).classList.add('active');
+}

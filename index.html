@@ -3,127 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO Meta Tags -->
     <title>Veridian — Verified Data Intelligence Platform</title>
     <meta name="description" content="Veridian is a B2B data intelligence platform that automates pipelines, delivers real-time analytics, and turns raw data into verified business intelligence." />
     <meta name="keywords" content="AI automation, data platform, machine learning, analytics, SaaS, artificial intelligence, data pipeline" />
     <meta name="author" content="Veridian" />
     <meta name="robots" content="index, follow" />
-
-    <!-- Open Graph Tags -->
     <meta property="og:title" content="Veridian — Verified Data Intelligence Platform" />
     <meta property="og:description" content="Turn raw data into verified intelligence. Veridian unifies your data stack with AI-powered automation and real-time insights." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://Monisha-B-Krishna.github.io/frontend-battle-3/" />
     <meta property="og:image" content="https://Monisha-B-Krishna.github.io/frontend-battle-3/assets/og-image.png" />
-
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Veridian — Verified Data Intelligence Platform" />
     <meta name="twitter:description" content="Turn raw data into verified intelligence. Veridian automates your data stack with cutting-edge AI." />
-
-    <!-- Canonical -->
     <link rel="canonical" href="https://Monisha-B-Krishna.github.io/frontend-battle-3/" />
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-
   <body>
-    <!-- ========== PAGE LOADER ========== -->
-<div id="pageLoader" aria-hidden="true">
-  <div class="loader-inner">
-    <div class="loader-logo">
-      <img src="assets/svg/cube-16-solid.svg" alt="" width="36" height="36" class="icon-gold-solid loader-spin" />
-      <span>Veri<span>dian</span></span>
-    </div>
-    <div class="loader-bar-wrap">
-      <div class="loader-bar"></div>
-    </div>
-    <p class="loader-text">Initializing data streams...</p>
-  </div>
-</div>
 
-    <!-- ========== NAVBAR ========== -->
+    <!-- PAGE LOADER -->
+    <div id="pageLoader" aria-hidden="true">
+      <div class="loader-inner">
+        <div class="loader-logo">
+          <img src="assets/svg/cube-16-solid.svg" alt="" width="36" height="36" class="icon-gold-solid loader-spin" />
+          <span>Veri<span>dian</span></span>
+        </div>
+        <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+        <p class="loader-text">Initializing data streams...</p>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
     <header>
       <nav class="navbar navbar-expand-lg fixed-top" id="mainNav" aria-label="Main navigation">
         <div class="container-xl">
-
           <a class="navbar-brand d-flex align-items-center gap-2" href="#hero">
-            <img src="assets/svg/cube-16-solid.svg" alt="Veridian logo cube icon" width="28" height="28" class="icon-gold-solid" />
+            <img src="assets/svg/cube-16-solid.svg" alt="Veridian logo" width="28" height="28" class="icon-gold-solid" />
             <span class="brand-name">Veri<span class="text-forsythia">dian</span></span>
           </a>
-
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navMenu" aria-controls="navMenu"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <img src="assets/svg/x-mark.svg" alt="menu icon" width="22" height="22" class="icon-light" id="navIcon" />
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="assets/svg/x-mark.svg" alt="menu icon" width="22" height="22" class="icon-light" />
           </button>
-
           <div class="collapse navbar-collapse" id="navMenu">
             <ul class="navbar-nav mx-auto gap-lg-2">
-              <li class="nav-item">
-                <a class="nav-link" href="#features">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#pricing">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#social-proof">Customers</a>
-              </li>
+              <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+              <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+              <li class="nav-item"><a class="nav-link" href="#social-proof">Customers</a></li>
               <li class="nav-item d-flex align-items-center gap-1">
-                <a class="nav-link d-flex align-items-center gap-1" href="#features">
-                  Platform
-                  <img src="assets/svg/chevron-down.svg" alt="" width="16" height="16" class="icon-light" aria-hidden="true" />
-                </a>
+                <a class="nav-link d-flex align-items-center gap-1" href="#features" onclick="event.preventDefault(); document.getElementById('features').scrollIntoView({behavior:'smooth'})">
+  Platform
+  <img src="assets/svg/chevron-down.svg" alt="" width="16" height="16" class="icon-light" aria-hidden="true" />
+</a>
               </li>
             </ul>
             <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
               <a href="#" class="nav-link nav-signin">Sign In</a>
-              <a href="#pricing" class="btn-primary-custom" onclick="document.getElementById('btnMonthly').focus()">Get Started</a>
+              <a href="#pricing" class="btn-primary-custom">Get Started</a>
             </div>
           </div>
-
         </div>
       </nav>
     </header>
 
-    <!-- ========== HERO ========== -->
+    <!-- HERO -->
     <main>
       <section id="hero" aria-label="Hero section">
         <div class="hero-bg">
           <div class="container-xl">
             <div class="row align-items-center min-vh-100 py-5">
-
               <div class="col-lg-6 hero-content">
                 <div class="hero-badge hero-enter" style="--delay:50ms">
                   <img src="assets/svg/arrow-trending-up.svg" alt="" width="16" height="16" class="icon-gold" aria-hidden="true" />
                   <span>Verified Data Intelligence</span>
                 </div>
-
                 <h1 class="hero-title hero-enter" style="--delay:150ms">
                   Raw Data Into<br />
                   <span class="text-forsythia">Verified Intelligence.</span>
                 </h1>
-
                 <p class="hero-subtitle hero-enter" style="--delay:250ms">
                   Veridian unifies your entire data stack — automating pipelines, surfacing real-time insights, and delivering ML-powered predictions your team can actually trust.
                 </p>
-
                 <div class="hero-actions hero-enter" style="--delay:350ms">
                   <a href="#pricing" class="btn-primary-custom">Start Free Trial</a>
                   <a href="#features" class="btn-outline-custom">Explore Features</a>
                 </div>
-
                 <div class="hero-stats hero-enter" style="--delay:450ms">
                   <div class="hero-stat">
                     <span class="stat-number">99.9<span class="text-forsythia">%</span></span>
@@ -141,10 +108,8 @@
                   </div>
                 </div>
               </div>
-
               <div class="col-lg-6 d-flex justify-content-center mt-5 mt-lg-0">
                 <div class="hero-visual">
-
                   <div class="hero-card hero-card-main">
                     <div class="hero-card-header">
                       <img src="assets/svg/chart-pie.svg" alt="Analytics icon" width="20" height="20" class="icon-gold" />
@@ -162,7 +127,6 @@
                     </div>
                     <p class="hero-card-metric">+24.8% <span>this week</span></p>
                   </div>
-
                   <div class="hero-card hero-card-secondary">
                     <img src="assets/svg/cog-8-tooth.svg" alt="Automation icon" width="18" height="18" class="icon-gold" />
                     <div>
@@ -171,7 +135,6 @@
                     </div>
                     <span class="status-dot"></span>
                   </div>
-
                   <div class="hero-card hero-card-tertiary">
                     <img src="assets/svg/arrow-path.svg" alt="Sync icon" width="18" height="18" class="icon-gold" />
                     <div>
@@ -179,309 +142,332 @@
                       <p class="hero-card-sub">2.4M records / sec</p>
                     </div>
                   </div>
-
                 </div>
               </div>
-
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- ========== FEATURES ========== -->
-    <!-- ========== FEATURES ========== -->
-<section id="features" aria-label="Features section">
+    <!-- FEATURES -->
+    <section id="features" aria-label="Features section">
 
-  <!-- Part A: Stats Ticker -->
-  <div class="ticker-bar">
-    <div class="ticker-track">
-      <span><img src="assets/svg/arrow-trending-up.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> 2.4M records synced/sec</span>
-      <span><img src="assets/svg/cog-8-tooth.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> 99.9% uptime guaranteed</span>
-      <span><img src="assets/svg/link-solid.svg" width="14" height="14" class="icon-gold-solid" alt="" aria-hidden="true" /> 500+ integrations live</span>
-      <span><img src="assets/svg/chart-pie.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> Real-time analytics dashboard</span>
-      <span><img src="assets/svg/arrow-path.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> Auto-healing pipelines</span>
-      <span><img src="assets/svg/cube-16-solid.svg" width="14" height="14" class="icon-gold-solid" alt="" aria-hidden="true" /> Modular architecture</span>
-      <!-- duplicate for seamless loop -->
-      <span><img src="assets/svg/arrow-trending-up.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> 2.4M records synced/sec</span>
-      <span><img src="assets/svg/cog-8-tooth.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> 99.9% uptime guaranteed</span>
-      <span><img src="assets/svg/link-solid.svg" width="14" height="14" class="icon-gold-solid" alt="" aria-hidden="true" /> 500+ integrations live</span>
-      <span><img src="assets/svg/chart-pie.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> Real-time analytics dashboard</span>
-      <span><img src="assets/svg/arrow-path.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> Auto-healing pipelines</span>
-      <span><img src="assets/svg/cube-16-solid.svg" width="14" height="14" class="icon-gold-solid" alt="" aria-hidden="true" /> Modular architecture</span>
-    </div>
-  </div>
+      <!-- Ticker -->
+      <div class="ticker-bar">
+        <div class="ticker-track">
+          <span><img src="assets/svg/arrow-trending-up.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> 2.4M records synced/sec</span>
+          <span><img src="assets/svg/cog-8-tooth.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> 99.9% uptime guaranteed</span>
+          <span><img src="assets/svg/link-solid.svg" width="14" height="14" class="icon-gold-solid" alt="" aria-hidden="true" /> 500+ integrations live</span>
+          <span><img src="assets/svg/chart-pie.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> Real-time analytics dashboard</span>
+          <span><img src="assets/svg/arrow-path.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> Auto-healing pipelines</span>
+          <span><img src="assets/svg/cube-16-solid.svg" width="14" height="14" class="icon-gold-solid" alt="" aria-hidden="true" /> Modular architecture</span>
+          <span><img src="assets/svg/arrow-trending-up.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> 2.4M records synced/sec</span>
+          <span><img src="assets/svg/cog-8-tooth.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> 99.9% uptime guaranteed</span>
+          <span><img src="assets/svg/link-solid.svg" width="14" height="14" class="icon-gold-solid" alt="" aria-hidden="true" /> 500+ integrations live</span>
+          <span><img src="assets/svg/chart-pie.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> Real-time analytics dashboard</span>
+          <span><img src="assets/svg/arrow-path.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> Auto-healing pipelines</span>
+          <span><img src="assets/svg/cube-16-solid.svg" width="14" height="14" class="icon-gold-solid" alt="" aria-hidden="true" /> Modular architecture</span>
+        </div>
+      </div>
 
-  <!-- Part B: Feature Showcase -->
-  <div class="container-xl py-5">
+      <div class="container-xl py-5">
+        <div class="text-center mb-5">
+          <p class="section-label">Platform Capabilities</p>
+          <h2 class="section-title">Built for Teams That <span class="text-forsythia">Move Fast</span></h2>
+          <p class="section-subtitle">Every module designed to eliminate bottlenecks, cut manual work, and deliver insights your team can act on immediately.</p>
+        </div>
 
-    <div class="text-center mb-5">
-      <p class="section-label">Platform Capabilities</p>
-      <h2 class="section-title">Built for Teams That <span class="text-forsythia">Move Fast</span></h2>
-      <p class="section-subtitle">Every module designed to eliminate bottlenecks, cut manual work, and deliver insights your team can act on immediately.</p>
-    </div>
+        <!-- BENTO GRID -->
+        <div class="bento-grid" id="bentoGrid">
 
-    <!-- BENTO GRID desktop -->
-    <div class="bento-grid" id="bentoGrid">
-
-      <div class="bento-card bento-large" data-index="0" tabindex="0" style="--delay:0ms">
-        <div class="bento-card-bg bg-automation"></div>
-        <div class="bento-content bento-split">
-
-          <!-- Left: text -->
-          <div class="bento-text-col">
-            <div class="bento-icon">
-              <img src="assets/svg/cog-8-tooth.svg" alt="Automation engine icon" width="28" height="28" class="icon-gold" />
-            </div>
-            <div class="bento-tag">Core Feature</div>
-            <h3 class="bento-title">Automation Engine</h3>
-            <p class="bento-desc">Build complex workflows with zero code. Drag, connect, deploy.</p>
-            <ul class="bento-bullets">
-              <li>Visual drag-and-drop builder</li>
-              <li>Conditional logic & branching</li>
-              <li>Auto-retry on failure</li>
-            </ul>
-          </div>
-
-          <!-- Right: product mockup -->
-          <div class="bento-mockup" aria-hidden="true">
-            <div class="mockup-window">
-              <div class="mockup-titlebar">
-                <span class="mockup-dot red"></span>
-                <span class="mockup-dot yellow"></span>
-                <span class="mockup-dot green"></span>
-                <span class="mockup-title">Pipeline Builder</span>
+          <!-- Card 0: Automation Engine -->
+          <div class="bento-card bento-large" data-index="0" tabindex="0" style="--delay:0ms">
+            <div class="bento-card-bg bg-automation"></div>
+            <div class="bento-content bento-split">
+              <div class="bento-text-col">
+                <div class="bento-icon">
+                  <img src="assets/svg/cog-8-tooth.svg" alt="Automation engine icon" width="28" height="28" class="icon-gold" />
+                </div>
+                <div class="bento-tag">Core Feature</div>
+                <h3 class="bento-title">Automation Engine</h3>
+                <p class="bento-desc">Build complex workflows with zero code. Drag, connect, deploy.</p>
+                <ul class="bento-bullets">
+                  <li>Visual drag-and-drop builder</li>
+                  <li>Conditional logic & branching</li>
+                  <li>Auto-retry on failure</li>
+                </ul>
               </div>
-              <div class="mockup-body">
-                <!-- Pipeline nodes -->
-                <div class="pipeline-row">
-                  <div class="pipe-node active">
-                    <img src="assets/svg/cube-16-solid.svg" width="12" height="12" alt="" class="icon-gold-solid" />
-                    <span>Data Source</span>
+              <div class="bento-mockup" aria-hidden="true">
+                <div class="mockup-window">
+                  <div class="mockup-titlebar">
+                    <span class="mockup-dot red"></span>
+                    <span class="mockup-dot yellow"></span>
+                    <span class="mockup-dot green"></span>
+                    <span class="mockup-title">Pipeline Builder</span>
                   </div>
-                  <div class="pipe-arrow">→</div>
-                  <div class="pipe-node">
-                    <img src="assets/svg/cog-8-tooth.svg" width="12" height="12" alt="" class="icon-gold" />
-                    <span>Transform</span>
+                  <div class="mockup-body">
+                    <div class="pipeline-row">
+                      <div class="pipe-node active"><img src="assets/svg/cube-16-solid.svg" width="12" height="12" alt="" class="icon-gold-solid" /><span>Data Source</span></div>
+                      <div class="pipe-arrow">→</div>
+                      <div class="pipe-node"><img src="assets/svg/cog-8-tooth.svg" width="12" height="12" alt="" class="icon-gold" /><span>Transform</span></div>
+                      <div class="pipe-arrow">→</div>
+                      <div class="pipe-node success"><img src="assets/svg/arrow-trending-up.svg" width="12" height="12" alt="" class="icon-gold" /><span>Output</span></div>
+                    </div>
+                    <div class="mockup-stats">
+                      <div class="mockup-stat"><span class="mstat-val">1,284</span><span class="mstat-label">Records</span></div>
+                      <div class="mockup-stat"><span class="mstat-val">0.3s</span><span class="mstat-label">Latency</span></div>
+                      <div class="mockup-stat"><span class="mstat-val">100%</span><span class="mstat-label">Success</span></div>
+                    </div>
+                    <div class="mockup-log">
+                      <div class="log-line"><span class="log-time">09:42:01</span><span class="log-msg success-text">Pipeline started</span></div>
+                      <div class="log-line"><span class="log-time">09:42:01</span><span class="log-msg">Fetching source data...</span></div>
+                      <div class="log-line"><span class="log-time">09:42:02</span><span class="log-msg success-text">Transform complete</span></div>
+                      <div class="log-line"><span class="log-time">09:42:02</span><span class="log-msg">Writing to output...</span></div>
+                    </div>
                   </div>
-                  <div class="pipe-arrow">→</div>
-                  <div class="pipe-node success">
-                    <img src="assets/svg/arrow-trending-up.svg" width="12" height="12" alt="" class="icon-gold" />
-                    <span>Output</span>
-                  </div>
-                </div>
-                <!-- Stats row -->
-                <div class="mockup-stats">
-                  <div class="mockup-stat">
-                    <span class="mstat-val">1,284</span>
-                    <span class="mstat-label">Records</span>
-                  </div>
-                  <div class="mockup-stat">
-                    <span class="mstat-val">0.3s</span>
-                    <span class="mstat-label">Latency</span>
-                  </div>
-                  <div class="mockup-stat">
-                    <span class="mstat-val">100%</span>
-                    <span class="mstat-label">Success</span>
-                  </div>
-                </div>
-                <!-- Log lines -->
-                <div class="mockup-log">
-                  <div class="log-line"><span class="log-time">09:42:01</span><span class="log-msg success-text">Pipeline started</span></div>
-                  <div class="log-line"><span class="log-time">09:42:01</span><span class="log-msg">Fetching source data...</span></div>
-                  <div class="log-line"><span class="log-time">09:42:02</span><span class="log-msg success-text">Transform complete</span></div>
-                  <div class="log-line"><span class="log-time">09:42:02</span><span class="log-msg">Writing to output...</span></div>
                 </div>
               </div>
             </div>
           </div>
 
-        </div>
-      </div>
-
-      <div class="bento-card bento-tall" data-index="1" tabindex="0" style="--delay:80ms">
-        <div class="bento-card-bg bg-analytics"></div>
-        <div class="bento-content">
-          <div class="bento-icon">
-            <img src="assets/svg/chart-pie.svg" alt="Analytics icon" width="28" height="28" class="icon-gold" />
+          <!-- Card 1: Real-Time Analytics -->
+          <div class="bento-card bento-tall" data-index="1" tabindex="0" style="--delay:80ms">
+            <div class="bento-card-bg bg-analytics"></div>
+            <div class="bento-content">
+              <div class="bento-icon">
+                <img src="assets/svg/chart-pie.svg" alt="Analytics icon" width="28" height="28" class="icon-gold" />
+              </div>
+              <div class="bento-tag">Analytics</div>
+              <h3 class="bento-title">Real-Time Analytics</h3>
+              <p class="bento-desc">Live dashboards with sub-second refresh.</p>
+              <ul class="bento-bullets">
+                <li>Sub-second data refresh</li>
+                <li>Custom KPI widgets</li>
+                <li>Export to CSV/PDF</li>
+              </ul>
+              <div class="mini-mockup mt-auto">
+                <div class="mockup-titlebar">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                  <span class="mockup-title">Live Dashboard</span>
+                </div>
+                <div class="mini-chart-body">
+                  <div class="mini-kpi-row">
+                    <div class="mini-kpi"><span class="mini-kpi-val text-forsythia">+24.8%</span><span class="mini-kpi-label">Revenue</span></div>
+                    <div class="mini-kpi"><span class="mini-kpi-val">1.2M</span><span class="mini-kpi-label">Events</span></div>
+                  </div>
+                  <div class="mini-bars">
+                    <div class="mini-bar" style="--bh:40%"></div>
+                    <div class="mini-bar" style="--bh:65%"></div>
+                    <div class="mini-bar" style="--bh:45%"></div>
+                    <div class="mini-bar" style="--bh:80%"></div>
+                    <div class="mini-bar" style="--bh:60%"></div>
+                    <div class="mini-bar" style="--bh:90%"></div>
+                    <div class="mini-bar" style="--bh:75%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="bento-tag">Analytics</div>
-          <h3 class="bento-title">Real-Time Analytics</h3>
-          <p class="bento-desc">Live dashboards with sub-second refresh. Track KPIs as they happen.</p>
-          <ul class="bento-bullets">
-            <li>Sub-second data refresh</li>
-            <li>Custom KPI widgets</li>
-            <li>Export to CSV/PDF</li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="bento-card" data-index="2" tabindex="0" style="--delay:160ms">
-        <div class="bento-card-bg bg-integrations"></div>
-        <div class="bento-content">
-          <div class="bento-icon">
-            <img src="assets/svg/link-solid.svg" alt="Integrations icon" width="28" height="28" class="icon-gold-solid" />
+          <!-- Card 2: Integrations -->
+          <div class="bento-card" data-index="2" tabindex="0" style="--delay:160ms">
+            <div class="bento-card-bg bg-integrations"></div>
+            <div class="bento-content">
+              <div class="bento-icon">
+                <img src="assets/svg/link-solid.svg" alt="Integrations icon" width="28" height="28" class="icon-gold-solid" />
+              </div>
+              <div class="bento-tag">Connectivity</div>
+              <h3 class="bento-title">500+ Integrations</h3>
+              <p class="bento-desc">Connect every tool in your stack instantly.</p>
+              <div class="integration-grid">
+                <div class="int-bubble"><img src="assets/svg/link-solid.svg" width="14" height="14" alt="" class="icon-gold-solid" /><span>Salesforce</span></div>
+                <div class="int-bubble"><img src="assets/svg/cog-8-tooth.svg" width="14" height="14" alt="" class="icon-gold" /><span>HubSpot</span></div>
+                <div class="int-bubble active"><img src="assets/svg/arrow-path.svg" width="14" height="14" alt="" class="icon-gold" /><span>Slack</span></div>
+                <div class="int-bubble"><img src="assets/svg/cube-16-solid.svg" width="14" height="14" alt="" class="icon-gold-solid" /><span>AWS</span></div>
+                <div class="int-bubble"><img src="assets/svg/search.svg" width="14" height="14" alt="" class="icon-gold-solid" /><span>BigQuery</span></div>
+                <div class="int-bubble active"><img src="assets/svg/chart-pie.svg" width="14" height="14" alt="" class="icon-gold" /><span>Notion</span></div>
+              </div>
+            </div>
           </div>
-          <div class="bento-tag">Connectivity</div>
-          <h3 class="bento-title">500+ Integrations</h3>
-          <p class="bento-desc">Connect every tool in your stack instantly.</p>
-          <ul class="bento-bullets">
-            <li>Salesforce, HubSpot, Slack</li>
-            <li>REST & GraphQL APIs</li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="bento-card" data-index="3" tabindex="0" style="--delay:240ms">
-        <div class="bento-card-bg bg-sync"></div>
-        <div class="bento-content">
-          <div class="bento-icon">
-            <img src="assets/svg/arrow-path.svg" alt="Sync icon" width="28" height="28" class="icon-gold" />
+          <!-- Card 3: Data Sync -->
+          <div class="bento-card" data-index="3" tabindex="0" style="--delay:240ms">
+            <div class="bento-card-bg bg-sync"></div>
+            <div class="bento-content">
+              <div class="bento-icon">
+                <img src="assets/svg/arrow-path.svg" alt="Sync icon" width="28" height="28" class="icon-gold" />
+              </div>
+              <div class="bento-tag">Performance</div>
+              <h3 class="bento-title">Data Sync</h3>
+              <p class="bento-desc">Bi-directional sync at 2.4M records/sec.</p>
+              <div class="sync-mockup">
+                <div class="sync-node"><img src="assets/svg/cube-16-solid.svg" width="14" height="14" alt="" class="icon-gold-solid" /><span>Source DB</span></div>
+                <div class="sync-line">
+                  <div class="sync-packet"></div>
+                  <div class="sync-packet delay1"></div>
+                  <img src="assets/svg/arrow-path.svg" width="16" height="16" alt="" class="icon-gold sync-spin" />
+                  <div class="sync-packet reverse"></div>
+                </div>
+                <div class="sync-node"><img src="assets/svg/link-solid.svg" width="14" height="14" alt="" class="icon-gold-solid" /><span>Target DB</span></div>
+                <div class="sync-stat"><span class="text-forsythia">2.4M</span> records/sec · <span class="text-forsythia">0ms</span> drift</div>
+              </div>
+            </div>
           </div>
-          <div class="bento-tag">Performance</div>
-          <h3 class="bento-title">Data Sync</h3>
-          <p class="bento-desc">Bi-directional sync across all sources at 2.4M records/sec.</p>
-          <ul class="bento-bullets">
-            <li>Zero-downtime migrations</li>
-            <li>Conflict resolution engine</li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="bento-card bento-wide" data-index="4" tabindex="0" style="--delay:320ms">
-        <div class="bento-card-bg bg-ml"></div>
-        <div class="bento-content">
-          <div class="bento-icon">
-            <img src="assets/svg/arrow-trending-up.svg" alt="Growth icon" width="28" height="28" class="icon-gold" />
+          <!-- Card 4: Predictive Intelligence -->
+          <div class="bento-card bento-wide" data-index="4" tabindex="0" style="--delay:320ms">
+            <div class="bento-card-bg bg-ml"></div>
+            <div class="bento-content bento-split">
+              <div class="bento-text-col">
+                <div class="bento-icon">
+                  <img src="assets/svg/arrow-trending-up.svg" alt="Growth icon" width="28" height="28" class="icon-gold" />
+                </div>
+                <div class="bento-tag">AI / ML</div>
+                <h3 class="bento-title">Predictive Intelligence</h3>
+                <p class="bento-desc">ML models that forecast trends and detect anomalies before problems arise.</p>
+                <ul class="bento-bullets">
+                  <li>Anomaly detection alerts</li>
+                  <li>Trend forecasting engine</li>
+                  <li>Custom model training</li>
+                </ul>
+              </div>
+              <div class="bento-mockup" aria-hidden="true">
+                <div class="mockup-window">
+                  <div class="mockup-titlebar">
+                    <span class="mockup-dot red"></span>
+                    <span class="mockup-dot yellow"></span>
+                    <span class="mockup-dot green"></span>
+                    <span class="mockup-title">ML Forecast</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="forecast-chart">
+                      <div class="forecast-label">Revenue Forecast — Next 7 days</div>
+                      <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" class="forecast-svg">
+                        <polyline points="0,60 30,50 60,45 90,35 120,30" fill="none" stroke="#FFC801" stroke-width="2" stroke-linecap="round"/>
+                        <polyline points="120,30 150,22 180,15 200,10" fill="none" stroke="#FF9932" stroke-width="2" stroke-dasharray="4 3" stroke-linecap="round"/>
+                        <circle cx="60" cy="45" r="4" fill="#FF9932" opacity="0.9"/>
+                        <circle cx="60" cy="45" r="8" fill="none" stroke="#FF9932" stroke-width="1" opacity="0.4"/>
+                        <polygon points="0,60 30,50 60,45 90,35 120,30 120,80 0,80" fill="url(#grad1)" opacity="0.15"/>
+                        <defs>
+                          <linearGradient id="grad1" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#FFC801"/>
+                            <stop offset="100%" stop-color="transparent"/>
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <div class="forecast-legend">
+                        <span class="legend-item"><span class="legend-dot solid"></span>Actual</span>
+                        <span class="legend-item"><span class="legend-dot dashed"></span>Forecast</span>
+                        <span class="legend-item"><span class="legend-dot anomaly"></span>Anomaly</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="bento-tag">AI / ML</div>
-          <h3 class="bento-title">Predictive Intelligence</h3>
-          <p class="bento-desc">ML models that forecast trends, detect anomalies, and surface insights before problems arise — keeping you always one step ahead.</p>
-          <ul class="bento-bullets">
-            <li>Anomaly detection alerts</li>
-            <li>Trend forecasting engine</li>
-            <li>Custom model training</li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="bento-card" data-index="5" tabindex="0" style="--delay:400ms">
-        <div class="bento-card-bg bg-modular"></div>
-        <div class="bento-content">
-          <div class="bento-icon">
-            <img src="assets/svg/cube-16-solid.svg" alt="Platform icon" width="28" height="28" class="icon-gold-solid" />
+          <!-- Card 5: Modular Platform -->
+          <div class="bento-card" data-index="5" tabindex="0" style="--delay:400ms">
+            <div class="bento-card-bg bg-modular"></div>
+            <div class="bento-content">
+              <div class="bento-icon">
+                <img src="assets/svg/cube-16-solid.svg" alt="Platform icon" width="28" height="28" class="icon-gold-solid" />
+              </div>
+              <div class="bento-tag">Architecture</div>
+              <h3 class="bento-title">Modular Platform</h3>
+              <p class="bento-desc">Pick only what you need. Scale independently.</p>
+              <div class="module-list">
+                <div class="module-item active">
+                  <img src="assets/svg/cog-8-tooth.svg" width="14" height="14" alt="" class="icon-gold" />
+                  <span>Automation</span>
+                  <div class="module-toggle on"></div>
+                </div>
+                <div class="module-item active">
+                  <img src="assets/svg/chart-pie.svg" width="14" height="14" alt="" class="icon-gold" />
+                  <span>Analytics</span>
+                  <div class="module-toggle on"></div>
+                </div>
+                <div class="module-item">
+                  <img src="assets/svg/arrow-trending-up.svg" width="14" height="14" alt="" class="icon-gold" />
+                  <span>ML Engine</span>
+                  <div class="module-toggle"></div>
+                </div>
+                <div class="module-item">
+                  <img src="assets/svg/link-solid.svg" width="14" height="14" alt="" class="icon-gold-solid" />
+                  <span>Integrations</span>
+                  <div class="module-toggle"></div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="bento-tag">Architecture</div>
-          <h3 class="bento-title">Modular Platform</h3>
-          <p class="bento-desc">Pick only what you need. Scale modules independently.</p>
-          <ul class="bento-bullets">
-            <li>Pay per module</li>
-            <li>Independent scaling</li>
-          </ul>
-        </div>
-      </div>
 
-    </div>
+        </div>
 
-    <!-- ACCORDION mobile -->
-    <div class="features-accordion" id="featuresAccordion">
-      <div class="acc-item" data-index="0">
-        <button class="acc-trigger" aria-expanded="false">
-          <span class="acc-trigger-left">
-            <img src="assets/svg/cog-8-tooth.svg" alt="" width="18" height="18" class="icon-gold" aria-hidden="true" />
-            Automation Engine
-          </span>
-          <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
-        </button>
-        <div class="acc-body">
-          <p>Build complex multi-step workflows with zero code. Visual drag-and-drop builder, conditional logic, auto-retry on failure. Runs 24/7 without intervention.</p>
+        <!-- ACCORDION mobile -->
+        <div class="features-accordion" id="featuresAccordion">
+          <div class="acc-item" data-index="0">
+            <button class="acc-trigger" aria-expanded="false">
+              <span class="acc-trigger-left"><img src="assets/svg/cog-8-tooth.svg" alt="" width="18" height="18" class="icon-gold" aria-hidden="true" />Automation Engine</span>
+              <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
+            </button>
+            <div class="acc-body"><p>Build complex multi-step workflows with zero code. Visual drag-and-drop builder, conditional logic, auto-retry on failure.</p></div>
+          </div>
+          <div class="acc-item" data-index="1">
+            <button class="acc-trigger" aria-expanded="false">
+              <span class="acc-trigger-left"><img src="assets/svg/chart-pie.svg" alt="" width="18" height="18" class="icon-gold" aria-hidden="true" />Real-Time Analytics</span>
+              <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
+            </button>
+            <div class="acc-body"><p>Live dashboards with sub-second refresh. Custom KPI widgets, export to CSV/PDF.</p></div>
+          </div>
+          <div class="acc-item" data-index="2">
+            <button class="acc-trigger" aria-expanded="false">
+              <span class="acc-trigger-left"><img src="assets/svg/link-solid.svg" alt="" width="18" height="18" class="icon-gold-solid" aria-hidden="true" />500+ Integrations</span>
+              <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
+            </button>
+            <div class="acc-body"><p>Connect Salesforce, HubSpot, Slack and 500+ more tools. REST & GraphQL API support built in.</p></div>
+          </div>
+          <div class="acc-item" data-index="3">
+            <button class="acc-trigger" aria-expanded="false">
+              <span class="acc-trigger-left"><img src="assets/svg/arrow-path.svg" alt="" width="18" height="18" class="icon-gold" aria-hidden="true" />Data Sync</span>
+              <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
+            </button>
+            <div class="acc-body"><p>Bi-directional sync at 2.4M records/sec. Zero-downtime migrations with conflict resolution engine.</p></div>
+          </div>
+          <div class="acc-item" data-index="4">
+            <button class="acc-trigger" aria-expanded="false">
+              <span class="acc-trigger-left"><img src="assets/svg/arrow-trending-up.svg" alt="" width="18" height="18" class="icon-gold" aria-hidden="true" />Predictive Intelligence</span>
+              <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
+            </button>
+            <div class="acc-body"><p>ML models that forecast trends, detect anomalies. Custom model training, real-time alerts.</p></div>
+          </div>
+          <div class="acc-item" data-index="5">
+            <button class="acc-trigger" aria-expanded="false">
+              <span class="acc-trigger-left"><img src="assets/svg/cube-16-solid.svg" alt="" width="18" height="18" class="icon-gold-solid" aria-hidden="true" />Modular Platform</span>
+              <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
+            </button>
+            <div class="acc-body"><p>Pay per module, scale independently. Pick exactly what your team needs — nothing more.</p></div>
+          </div>
         </div>
-      </div>
-      <div class="acc-item" data-index="1">
-        <button class="acc-trigger" aria-expanded="false">
-          <span class="acc-trigger-left">
-            <img src="assets/svg/chart-pie.svg" alt="" width="18" height="18" class="icon-gold" aria-hidden="true" />
-            Real-Time Analytics
-          </span>
-          <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
-        </button>
-        <div class="acc-body">
-          <p>Live dashboards with sub-second refresh. Custom KPI widgets, export to CSV/PDF, track everything as it happens.</p>
-        </div>
-      </div>
-      <div class="acc-item" data-index="2">
-        <button class="acc-trigger" aria-expanded="false">
-          <span class="acc-trigger-left">
-            <img src="assets/svg/link-solid.svg" alt="" width="18" height="18" class="icon-gold-solid" aria-hidden="true" />
-            500+ Integrations
-          </span>
-          <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
-        </button>
-        <div class="acc-body">
-          <p>Connect Salesforce, HubSpot, Slack and 500+ more tools. REST & GraphQL API support built in.</p>
-        </div>
-      </div>
-      <div class="acc-item" data-index="3">
-        <button class="acc-trigger" aria-expanded="false">
-          <span class="acc-trigger-left">
-            <img src="assets/svg/arrow-path.svg" alt="" width="18" height="18" class="icon-gold" aria-hidden="true" />
-            Data Sync
-          </span>
-          <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
-        </button>
-        <div class="acc-body">
-          <p>Bi-directional sync at 2.4M records/sec. Zero-downtime migrations with conflict resolution engine.</p>
-        </div>
-      </div>
-      <div class="acc-item" data-index="4">
-        <button class="acc-trigger" aria-expanded="false">
-          <span class="acc-trigger-left">
-            <img src="assets/svg/arrow-trending-up.svg" alt="" width="18" height="18" class="icon-gold" aria-hidden="true" />
-            Predictive Intelligence
-          </span>
-          <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
-        </button>
-        <div class="acc-body">
-          <p>ML models that forecast trends, detect anomalies. Custom model training, real-time alerts.</p>
-        </div>
-      </div>
-      <div class="acc-item" data-index="5">
-        <button class="acc-trigger" aria-expanded="false">
-          <span class="acc-trigger-left">
-            <img src="assets/svg/cube-16-solid.svg" alt="" width="18" height="18" class="icon-gold-solid" aria-hidden="true" />
-            Modular Platform
-          </span>
-          <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
-        </button>
-        <div class="acc-body">
-          <p>Pay per module, scale independently. Pick exactly what your team needs — nothing more.</p>
-        </div>
-      </div>
-    </div>
 
-  </div>
+      </div>
+    </section>
 
-  
-
-</section>
-
-    <!-- ========== PRICING ========== -->
+    <!-- PRICING -->
     <section id="pricing" aria-label="Pricing section">
       <div class="container-xl py-5">
-
         <div class="text-center mb-5">
           <p class="section-label">Simple Pricing</p>
           <h2 class="section-title">Choose Your <span class="text-forsythia">Growth Plan</span></h2>
           <p class="section-subtitle">Scale as you grow. No hidden fees. Cancel anytime.</p>
         </div>
-
         <div class="pricing-controls">
           <div class="billing-toggle" role="group" aria-label="Billing cycle">
             <button class="toggle-btn active" id="btnMonthly" onclick="setBilling('monthly')">Monthly</button>
-            <button class="toggle-btn" id="btnAnnual" onclick="setBilling('annual')">
-              Annual
-              <span class="save-badge">Save 20%</span>
-            </button>
+            <button class="toggle-btn" id="btnAnnual" onclick="setBilling('annual')">Annual <span class="save-badge">Save 20%</span></button>
           </div>
           <div class="currency-selector">
             <img src="assets/svg/chevron-down.svg" alt="" width="14" height="14" class="icon-light" aria-hidden="true" />
@@ -492,9 +478,7 @@
             </select>
           </div>
         </div>
-
         <div class="row g-4 justify-content-center mt-2">
-
           <div class="col-lg-4 col-md-6">
             <div class="pricing-card">
               <div class="pricing-tier">Starter</div>
@@ -513,7 +497,6 @@
               <a href="#" class="btn-outline-custom w-100 text-center d-block">Get Started</a>
             </div>
           </div>
-
           <div class="col-lg-4 col-md-6">
             <div class="pricing-card pricing-featured">
               <div class="pricing-popular">Most Popular</div>
@@ -533,7 +516,6 @@
               <a href="#" class="btn-primary-custom w-100 text-center d-block">Start Free Trial</a>
             </div>
           </div>
-
           <div class="col-lg-4 col-md-6">
             <div class="pricing-card">
               <div class="pricing-tier">Enterprise</div>
@@ -552,178 +534,160 @@
               <a href="#" class="btn-outline-custom w-100 text-center d-block">Contact Sales</a>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ========== SOCIAL PROOF ========== -->
+    <!-- SOCIAL PROOF -->
     <section id="social-proof" aria-label="Customer testimonials">
       <div class="container-xl py-5">
-
         <div class="text-center mb-5">
           <p class="section-label">Trusted Worldwide</p>
           <h2 class="section-title">Loved by <span class="text-forsythia">10,000+ Teams</span></h2>
           <p class="section-subtitle">From startups to Fortune 500s — teams everywhere trust Veridian.</p>
         </div>
+        <div class="logo-strip mb-4">
+  <div class="logo-item trust-btn active" data-review="0" onclick="switchReview(0)"><img src="assets/svg/cube-16-solid.svg" alt="TechCorp" width="22" height="22" class="icon-muted-soft" /><span>TechCorp</span></div>
+  <div class="logo-item trust-btn" data-review="1" onclick="switchReview(1)"><img src="assets/svg/link-solid.svg" alt="DataFlow" width="22" height="22" class="icon-muted-soft" /><span>DataFlow</span></div>
+  <div class="logo-item trust-btn" data-review="2" onclick="switchReview(2)"><img src="assets/svg/cog-8-tooth.svg" alt="AutoSys" width="22" height="22" class="icon-muted-soft" /><span>AutoSys</span></div>
+  <div class="logo-item trust-btn" data-review="3" onclick="switchReview(3)"><img src="assets/svg/chart-pie.svg" alt="Analytix" width="22" height="22" class="icon-muted-soft" /><span>Analytix</span></div>
+  <div class="logo-item trust-btn" data-review="4" onclick="switchReview(4)"><img src="assets/svg/arrow-trending-up.svg" alt="GrowthLab" width="22" height="22" class="icon-muted-soft" /><span>GrowthLab</span></div>
+</div>
 
-        <div class="logo-strip mb-5">
-          <div class="logo-item">
-            <img src="assets/svg/cube-16-solid.svg" alt="TechCorp logo" width="22" height="22" class="icon-muted-soft" />
-            <span>TechCorp</span>
-          </div>
-          <div class="logo-item">
-            <img src="assets/svg/link-solid.svg" alt="DataFlow logo" width="22" height="22" class="icon-muted-soft" />
-            <span>DataFlow</span>
-          </div>
-          <div class="logo-item">
-            <img src="assets/svg/cog-8-tooth.svg" alt="AutoSys logo" width="22" height="22" class="icon-muted-soft" />
-            <span>AutoSys</span>
-          </div>
-          <div class="logo-item">
-            <img src="assets/svg/chart-pie.svg" alt="Analytix logo" width="22" height="22" class="icon-muted-soft" />
-            <span>Analytix</span>
-          </div>
-          <div class="logo-item">
-            <img src="assets/svg/arrow-trending-up.svg" alt="GrowthLab logo" width="22" height="22" class="icon-muted-soft" />
-            <span>GrowthLab</span>
-          </div>
-        </div>
-
-        <div class="row g-4">
-
-          <div class="col-lg-4 col-md-6">
-            <article class="testimonial-card">
-              <div class="stars" aria-label="5 stars">★★★★★</div>
-              <blockquote>
-                <p>"Veridian cut our data processing time by 80%. The automation pipelines are incredibly powerful and the analytics dashboard is stunning."</p>
-              </blockquote>
-              <div class="testimonial-author">
-                <div class="author-avatar">SR</div>
-                <div>
-                  <p class="author-name">Sarah Reynolds</p>
-                  <p class="author-role">CTO, TechCorp</p>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <article class="testimonial-card testimonial-featured">
-              <div class="stars" aria-label="5 stars">★★★★★</div>
-              <blockquote>
-                <p>"The bento dashboard alone saved us 3 engineering sprints. We went from raw data chaos to real-time insights in under a week."</p>
-              </blockquote>
-              <div class="testimonial-author">
-                <div class="author-avatar">MK</div>
-                <div>
-                  <p class="author-name">Marcus Kim</p>
-                  <p class="author-role">Head of Data, DataFlow</p>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <article class="testimonial-card">
-              <div class="stars" aria-label="5 stars">★★★★★</div>
-              <blockquote>
-                <p>"Switched from three separate tools to just Veridian. The 500+ integrations meant zero migration friction. Absolutely worth it."</p>
-              </blockquote>
-              <div class="testimonial-author">
-                <div class="author-avatar">AP</div>
-                <div>
-                  <p class="author-name">Anika Patel</p>
-                  <p class="author-role">Engineering Lead, AutoSys</p>
-                </div>
-              </div>
-            </article>
-          </div>
-
-        </div>
+<div class="review-display mb-4">
+  <article class="review-card active" data-review="0">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="r-card-inner"><div class="stars">★★★★★</div><blockquote><p>"Veridian cut our processing time by 80%. Automation pipelines are incredibly powerful."</p></blockquote><div class="testimonial-author"><div class="author-avatar">SR</div><div><p class="author-name">Sarah Reynolds</p><p class="author-role">CTO, TechCorp</p></div></div></div>
       </div>
-      <!-- ========== FAQ ========== -->
-<section id="faq" aria-label="Frequently asked questions">
-  <div class="container-xl py-5">
-    <div class="faq-wrap">
-      <div class="text-center mb-4">
-        <p class="section-label">Got Questions?</p>
-        <h2 class="section-title">Frequently Asked <span class="text-forsythia">Questions</span></h2>
+      <div class="col-md-4">
+        <div class="r-card-inner"><div class="stars">★★★★★</div><blockquote><p>"Went from raw data chaos to real-time insights in under a week. Unbelievable speed."</p></blockquote><div class="testimonial-author"><div class="author-avatar">JL</div><div><p class="author-name">James Lee</p><p class="author-role">VP Eng, TechCorp</p></div></div></div>
       </div>
-      <div class="faq-grid">
-
-        <div class="faq-item">
-          <button class="faq-trigger" aria-expanded="false">
-            <span>How quickly can I get started?</span>
-            <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light faq-chevron" aria-hidden="true" />
-          </button>
-          <div class="faq-body">
-            <p>You can connect your first data source and run your first automation in under 10 minutes. No engineering team required — our visual builder guides you through setup step by step.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-trigger" aria-expanded="false">
-            <span>Do I need technical skills to use Veridian?</span>
-            <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light faq-chevron" aria-hidden="true" />
-          </button>
-          <div class="faq-body">
-            <p>Not at all. Veridian is built for both technical and non-technical users. The drag-and-drop automation builder requires zero coding. For advanced users, we also offer a full API and SDK.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-trigger" aria-expanded="false">
-            <span>How does the annual discount work?</span>
-            <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light faq-chevron" aria-hidden="true" />
-          </button>
-          <div class="faq-body">
-            <p>Switch to annual billing and save 20% across all plans. The discount is applied automatically — just toggle to Annual on the pricing section and you'll see the updated rates instantly.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-trigger" aria-expanded="false">
-            <span>Is my data secure?</span>
-            <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light faq-chevron" aria-hidden="true" />
-          </button>
-          <div class="faq-body">
-            <p>Yes. Veridian is SOC 2 Type II certified with end-to-end encryption at rest and in transit. Your data never leaves your designated region. Enterprise plans include dedicated infrastructure.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-trigger" aria-expanded="false">
-            <span>Can I cancel anytime?</span>
-            <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light faq-chevron" aria-hidden="true" />
-          </button>
-          <div class="faq-body">
-            <p>Absolutely. No lock-ins, no cancellation fees. Cancel from your dashboard at any time. Your data remains exportable for 30 days after cancellation.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-trigger" aria-expanded="false">
-            <span>What integrations are supported?</span>
-            <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light faq-chevron" aria-hidden="true" />
-          </button>
-          <div class="faq-body">
-            <p>We support 500+ integrations including Salesforce, HubSpot, Slack, Notion, Google Sheets, AWS, Azure, and all major databases. Custom integrations via REST API are available on Pro and Enterprise.</p>
-          </div>
-        </div>
-
+      <div class="col-md-4">
+        <div class="r-card-inner"><div class="stars">★★★★★</div><blockquote><p>"The analytics dashboard alone justified the entire subscription cost within week one."</p></blockquote><div class="testimonial-author"><div class="author-avatar">PM</div><div><p class="author-name">Priya Mehta</p><p class="author-role">Head of Data, TechCorp</p></div></div></div>
       </div>
     </div>
-  </div>
+  </article>
 
+  <article class="review-card" data-review="1">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="r-card-inner"><div class="stars">★★★★★</div><blockquote><p>"The bento dashboard saved us 3 engineering sprints. Real-time insights changed everything."</p></blockquote><div class="testimonial-author"><div class="author-avatar">MK</div><div><p class="author-name">Marcus Kim</p><p class="author-role">Head of Data, DataFlow</p></div></div></div>
+      </div>
+      <div class="col-md-4">
+        <div class="r-card-inner"><div class="stars">★★★★★</div><blockquote><p>"DataFlow processes 50M events daily on Veridian. Zero downtime in 8 months."</p></blockquote><div class="testimonial-author"><div class="author-avatar">AL</div><div><p class="author-name">Amy Lin</p><p class="author-role">Platform Lead, DataFlow</p></div></div></div>
+      </div>
+      <div class="col-md-4">
+        <div class="r-card-inner"><div class="stars">★★★★★</div><blockquote><p>"Migration from our legacy stack took 2 days. Expected 2 months. Genuinely shocked."</p></blockquote><div class="testimonial-author"><div class="author-avatar">RB</div><div><p class="author-name">Ryan Brooks</p><p class="author-role">CTO, DataFlow</p></div></div></div>
+      </div>
+    </div>
+  </article>
+
+  <article class="review-card" data-review="2">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="r-card-inner"><div class="stars">★★★★★</div><blockquote><p>"Switched from three tools to Veridian. 500+ integrations meant zero migration friction."</p></blockquote><div class="testimonial-author"><div class="author-avatar">AP</div><div><p class="author-name">Anika Patel</p><p class="author-role">Engineering Lead, AutoSys</p></div></div></div>
+      </div>
+      <div class="col-md-4">
+        <div class="r-card-inner"><div class="stars">★★★★★</div><blockquote><p>"AutoSys runs 200+ automated pipelines on Veridian. Not a single failure in production."</p></blockquote><div class="testimonial-author"><div class="author-avatar">DK</div><div><p class="author-name">David Kim</p><p class="author-role">DevOps Lead, AutoSys</p></div></div></div>
+      </div>
+      <div class="col-md-4">
+        <div class="r-card-inner"><div class="stars">★★★★★</div><blockquote><p>"The modular pricing means we only pay for what we use. Saved us $40K last quarter."</p></blockquote><div class="testimonial-author"><div class="author-avatar">SN</div><div><p class="author-name">Sara Novak</p><p class="author-role">CFO, AutoSys</p></div></div></div>
+      </div>
+    </div>
+  </article>
+
+  <article class="review-card" data-review="3">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="r-card-inner"><div class="stars">★★★★★</div><blockquote><p>"Analytix reporting dropped from 3 days to 3 minutes. The ML layer is a game changer."</p></blockquote><div class="testimonial-author"><div class="author-avatar">RJ</div><div><p class="author-name">Riya Joshi</p><p class="author-role">Data Lead, Analytix</p></div></div></div>
+      </div>
+      <div class="col-md-4">
+        <div class="r-card-inner"><div class="stars">★★★★★</div><blockquote><p>"Predictive anomaly detection caught a $2M billing error before it hit production."</p></blockquote><div class="testimonial-author"><div class="author-avatar">BT</div><div><p class="author-name">Ben Torres</p><p class="author-role">Analytics Lead, Analytix</p></div></div></div>
+      </div>
+      <div class="col-md-4">
+        <div class="r-card-inner"><div class="stars">★★★★★</div><blockquote><p>"We evaluated 6 platforms. Veridian was the only one that handled our scale on day one."</p></blockquote><div class="testimonial-author"><div class="author-avatar">NW</div><div><p class="author-name">Nina Walsh</p><p class="author-role">CTO, Analytix</p></div></div></div>
+      </div>
+    </div>
+  </article>
+
+  <article class="review-card" data-review="4">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="r-card-inner"><div class="stars">★★★★★</div><blockquote><p>"GrowthLab scaled from 10K to 10M records without changing a single config."</p></blockquote><div class="testimonial-author"><div class="author-avatar">TN</div><div><p class="author-name">Tom Nash</p><p class="author-role">CTO, GrowthLab</p></div></div></div>
+      </div>
+      <div class="col-md-4">
+        <div class="r-card-inner"><div class="stars">★★★★★</div><blockquote><p>"Veridian's uptime SLA is real. We've never had a pipeline failure in 14 months."</p></blockquote><div class="testimonial-author"><div class="author-avatar">KP</div><div><p class="author-name">Kate Park</p><p class="author-role">Platform Eng, GrowthLab</p></div></div></div>
+      </div>
+      <div class="col-md-4">
+        <div class="r-card-inner"><div class="stars">★★★★★</div><blockquote><p>"Our investors asked how we scaled so fast. The answer was always Veridian."</p></blockquote><div class="testimonial-author"><div class="author-avatar">OB</div><div><p class="author-name">Oliver Black</p><p class="author-role">CEO, GrowthLab</p></div></div></div>
+      </div>
+    </div>
+  </article>
+</div>
+      </div>
     </section>
 
-    <!-- ========== FOOTER ========== -->
+    <!-- FAQ -->
+    <section id="faq" aria-label="Frequently asked questions">
+      <div class="container-xl py-5">
+        <div class="faq-wrap">
+          <div class="text-center mb-4">
+            <p class="section-label">Got Questions?</p>
+            <h2 class="section-title">Frequently Asked <span class="text-forsythia">Questions</span></h2>
+          </div>
+          <div class="faq-grid">
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false">
+                <span>How quickly can I get started?</span>
+                <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light faq-chevron" aria-hidden="true" />
+              </button>
+              <div class="faq-body"><p>You can connect your first data source and run your first automation in under 10 minutes. No engineering team required — our visual builder guides you through setup step by step.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false">
+                <span>Do I need technical skills to use Veridian?</span>
+                <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light faq-chevron" aria-hidden="true" />
+              </button>
+              <div class="faq-body"><p>Not at all. Veridian is built for both technical and non-technical users. The drag-and-drop automation builder requires zero coding. For advanced users, we also offer a full API and SDK.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false">
+                <span>How does the annual discount work?</span>
+                <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light faq-chevron" aria-hidden="true" />
+              </button>
+              <div class="faq-body"><p>Switch to annual billing and save 20% across all plans. The discount is applied automatically — just toggle to Annual on the pricing section and you'll see the updated rates instantly.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false">
+                <span>Is my data secure?</span>
+                <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light faq-chevron" aria-hidden="true" />
+              </button>
+              <div class="faq-body"><p>Yes. Veridian is SOC 2 Type II certified with end-to-end encryption at rest and in transit. Your data never leaves your designated region. Enterprise plans include dedicated infrastructure.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false">
+                <span>Can I cancel anytime?</span>
+                <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light faq-chevron" aria-hidden="true" />
+              </button>
+              <div class="faq-body"><p>Absolutely. No lock-ins, no cancellation fees. Cancel from your dashboard at any time. Your data remains exportable for 30 days after cancellation.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false">
+                <span>What integrations are supported?</span>
+                <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light faq-chevron" aria-hidden="true" />
+              </button>
+              <div class="faq-body"><p>We support 500+ integrations including Salesforce, HubSpot, Slack, Notion, Google Sheets, AWS, Azure, and all major databases. Custom integrations via REST API are available on Pro and Enterprise.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer id="footer" aria-label="Site footer">
       <div class="container-xl py-5">
-
         <div class="row g-4 mb-5">
-
           <div class="col-lg-4 col-md-6">
             <a href="#hero" class="footer-brand">
               <img src="assets/svg/cube-16-solid.svg" alt="Veridian logo" width="26" height="26" class="icon-gold-solid" />
@@ -731,18 +695,11 @@
             </a>
             <p class="footer-tagline">Turn raw data into verified intelligence. Built for teams that move fast and scale without limits.</p>
             <div class="footer-social">
-              <a href="#" class="social-link" aria-label="Veridian on GitHub">
-                <img src="assets/svg/link-solid.svg" alt="" width="16" height="16" class="icon-light" aria-hidden="true" />
-              </a>
-              <a href="#" class="social-link" aria-label="Veridian on Twitter">
-                <img src="assets/svg/arrow-trending-up.svg" alt="" width="16" height="16" class="icon-light" aria-hidden="true" />
-              </a>
-              <a href="#" class="social-link" aria-label="Veridian search">
-                <img src="assets/svg/search.svg" alt="" width="16" height="16" class="icon-light-solid" aria-hidden="true" />
-              </a>
+              <a href="#" class="social-link" aria-label="Veridian on GitHub"><img src="assets/svg/link-solid.svg" alt="" width="16" height="16" class="icon-light" aria-hidden="true" /></a>
+              <a href="#" class="social-link" aria-label="Veridian on Twitter"><img src="assets/svg/arrow-trending-up.svg" alt="" width="16" height="16" class="icon-light" aria-hidden="true" /></a>
+              <a href="#" class="social-link" aria-label="Veridian search"><img src="assets/svg/search.svg" alt="" width="16" height="16" class="icon-light-solid" aria-hidden="true" /></a>
             </div>
           </div>
-
           <div class="col-lg-2 col-md-3 col-6">
             <h3 class="footer-heading">Product</h3>
             <ul class="footer-links">
@@ -753,7 +710,6 @@
               <li><a href="#">Roadmap</a></li>
             </ul>
           </div>
-
           <div class="col-lg-2 col-md-3 col-6">
             <h3 class="footer-heading">Company</h3>
             <ul class="footer-links">
@@ -764,7 +720,6 @@
               <li><a href="#">Contact</a></li>
             </ul>
           </div>
-
           <div class="col-lg-2 col-md-3 col-6">
             <h3 class="footer-heading">Resources</h3>
             <ul class="footer-links">
@@ -775,7 +730,6 @@
               <li><a href="#">Support</a></li>
             </ul>
           </div>
-
           <div class="col-lg-2 col-md-3 col-6">
             <h3 class="footer-heading">Legal</h3>
             <ul class="footer-links">
@@ -785,23 +739,17 @@
               <li><a href="#">Security</a></li>
             </ul>
           </div>
-
         </div>
-
         <div class="footer-bottom">
           <p class="footer-copy">© 2026 Veridian. All rights reserved. Built for Frontend Battle 3.0.</p>
           <a href="#hero" class="scroll-top" aria-label="Scroll to top">
             <img src="assets/svg/chevron-up-solid.svg" alt="" width="18" height="18" class="icon-gold-solid" aria-hidden="true" />
           </a>
         </div>
-
       </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
   </body>
 </html>
