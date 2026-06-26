@@ -406,3 +406,198 @@ h1, h2, h3, h4, h5, h6 {
   0%, 100% { box-shadow: 0 0 6px #22c55e; }
   50%       { box-shadow: 0 0 14px #22c55e; }
 }
+
+/* =============================================
+   SECTION COMMON
+   ============================================= */
+#features {
+  background-color: var(--nocturnal);
+}
+
+.section-label {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--forsythia);
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--arctic-powder);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--mystic-mint);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* =============================================
+   BENTO GRID
+   ============================================= */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 1.25rem;
+}
+
+.bento-card {
+  background: rgba(23, 43, 54, 0.8);
+  border: 1px solid rgba(255,200,1,0.1);
+  border-radius: 16px;
+  padding: 1.75rem;
+  cursor: pointer;
+  transition: border-color var(--transition-micro),
+              transform var(--transition-micro),
+              background var(--transition-micro);
+  position: relative;
+  overflow: hidden;
+}
+
+.bento-card:hover,
+.bento-card.active {
+  border-color: rgba(255,200,1,0.45);
+  background: rgba(17, 76, 90, 0.9);
+  transform: translateY(-4px);
+}
+
+.bento-large {
+  grid-column: span 2;
+}
+
+.bento-wide {
+  grid-column: span 2;
+}
+
+.bento-tall {
+  grid-row: span 2;
+}
+
+.bento-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(255,200,1,0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.bento-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--arctic-powder);
+  margin-bottom: 0.5rem;
+}
+
+.bento-desc {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--mystic-mint);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.bento-tag {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--forsythia);
+  background: rgba(255,200,1,0.08);
+  border: 1px solid rgba(255,200,1,0.2);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* =============================================
+   ACCORDION (mobile only)
+   ============================================= */
+.features-accordion { display: none; }
+
+.acc-item {
+  border: 1px solid rgba(255,200,1,0.1);
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  background: rgba(23,43,54,0.8);
+}
+
+.acc-trigger {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  color: var(--arctic-powder);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background var(--transition-micro);
+}
+
+.acc-trigger:hover {
+  background: rgba(255,200,1,0.05);
+}
+
+.acc-trigger-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.acc-chevron {
+  transition: transform var(--transition-layout);
+  flex-shrink: 0;
+}
+
+.acc-item.open .acc-chevron {
+  transform: rotate(180deg);
+}
+
+.acc-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-layout);
+  padding: 0 1.25rem;
+}
+
+.acc-body p {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--mystic-mint);
+  line-height: 1.65;
+  padding-bottom: 1rem;
+}
+
+.acc-item.open .acc-body {
+  max-height: 200px;
+}
+
+.acc-item.open .acc-trigger {
+  color: var(--forsythia);
+}
+
+/* =============================================
+   RESPONSIVE: switch bento <-> accordion
+   ============================================= */
+@media (max-width: 767px) {
+  .bento-grid       { display: none; }
+  .features-accordion { display: block; }
+}
