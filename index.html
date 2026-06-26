@@ -39,6 +39,19 @@
   </head>
 
   <body>
+    <!-- ========== PAGE LOADER ========== -->
+<div id="pageLoader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-logo">
+      <img src="assets/svg/cube-16-solid.svg" alt="" width="36" height="36" class="icon-gold-solid loader-spin" />
+      <span>Veri<span>dian</span></span>
+    </div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar"></div>
+    </div>
+    <p class="loader-text">Initializing data streams...</p>
+  </div>
+</div>
 
     <!-- ========== NAVBAR ========== -->
     <header>
@@ -92,26 +105,26 @@
             <div class="row align-items-center min-vh-100 py-5">
 
               <div class="col-lg-6 hero-content">
-                <div class="hero-badge">
+                <div class="hero-badge hero-enter" style="--delay:50ms">
                   <img src="assets/svg/arrow-trending-up.svg" alt="" width="16" height="16" class="icon-gold" aria-hidden="true" />
                   <span>Verified Data Intelligence</span>
                 </div>
 
-                <h1 class="hero-title">
+                <h1 class="hero-title hero-enter" style="--delay:150ms">
                   Raw Data Into<br />
                   <span class="text-forsythia">Verified Intelligence.</span>
                 </h1>
 
-                <p class="hero-subtitle">
+                <p class="hero-subtitle hero-enter" style="--delay:250ms">
                   Veridian unifies your entire data stack — automating pipelines, surfacing real-time insights, and delivering ML-powered predictions your team can actually trust.
                 </p>
 
-                <div class="hero-actions">
+                <div class="hero-actions hero-enter" style="--delay:350ms">
                   <a href="#pricing" class="btn-primary-custom">Start Free Trial</a>
                   <a href="#features" class="btn-outline-custom">Explore Features</a>
                 </div>
 
-                <div class="hero-stats">
+                <div class="hero-stats hero-enter" style="--delay:450ms">
                   <div class="hero-stat">
                     <span class="stat-number">99.9<span class="text-forsythia">%</span></span>
                     <span class="stat-label">Uptime SLA</span>
@@ -177,158 +190,280 @@
     </main>
 
     <!-- ========== FEATURES ========== -->
-    <section id="features" aria-label="Features section">
-      <div class="container-xl py-5">
+    <!-- ========== FEATURES ========== -->
+<section id="features" aria-label="Features section">
 
-        <div class="text-center mb-5">
-          <p class="section-label">Platform Capabilities</p>
-          <h2 class="section-title">Everything You Need to <span class="text-forsythia">Automate</span></h2>
-          <p class="section-subtitle">Six powerful modules working in harmony to transform your data operations.</p>
-        </div>
+  <!-- Part A: Stats Ticker -->
+  <div class="ticker-bar">
+    <div class="ticker-track">
+      <span><img src="assets/svg/arrow-trending-up.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> 2.4M records synced/sec</span>
+      <span><img src="assets/svg/cog-8-tooth.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> 99.9% uptime guaranteed</span>
+      <span><img src="assets/svg/link-solid.svg" width="14" height="14" class="icon-gold-solid" alt="" aria-hidden="true" /> 500+ integrations live</span>
+      <span><img src="assets/svg/chart-pie.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> Real-time analytics dashboard</span>
+      <span><img src="assets/svg/arrow-path.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> Auto-healing pipelines</span>
+      <span><img src="assets/svg/cube-16-solid.svg" width="14" height="14" class="icon-gold-solid" alt="" aria-hidden="true" /> Modular architecture</span>
+      <!-- duplicate for seamless loop -->
+      <span><img src="assets/svg/arrow-trending-up.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> 2.4M records synced/sec</span>
+      <span><img src="assets/svg/cog-8-tooth.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> 99.9% uptime guaranteed</span>
+      <span><img src="assets/svg/link-solid.svg" width="14" height="14" class="icon-gold-solid" alt="" aria-hidden="true" /> 500+ integrations live</span>
+      <span><img src="assets/svg/chart-pie.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> Real-time analytics dashboard</span>
+      <span><img src="assets/svg/arrow-path.svg" width="14" height="14" class="icon-gold" alt="" aria-hidden="true" /> Auto-healing pipelines</span>
+      <span><img src="assets/svg/cube-16-solid.svg" width="14" height="14" class="icon-gold-solid" alt="" aria-hidden="true" /> Modular architecture</span>
+    </div>
+  </div>
 
-        <!-- BENTO GRID desktop -->
-        <div class="bento-grid" id="bentoGrid">
+  <!-- Part B: Feature Showcase -->
+  <div class="container-xl py-5">
 
-          <div class="bento-card bento-large" data-index="0" tabindex="0">
+    <div class="text-center mb-5">
+      <p class="section-label">Platform Capabilities</p>
+      <h2 class="section-title">Built for Teams That <span class="text-forsythia">Move Fast</span></h2>
+      <p class="section-subtitle">Every module designed to eliminate bottlenecks, cut manual work, and deliver insights your team can act on immediately.</p>
+    </div>
+
+    <!-- BENTO GRID desktop -->
+    <div class="bento-grid" id="bentoGrid">
+
+      <div class="bento-card bento-large" data-index="0" tabindex="0" style="--delay:0ms">
+        <div class="bento-card-bg bg-automation"></div>
+        <div class="bento-content bento-split">
+
+          <!-- Left: text -->
+          <div class="bento-text-col">
             <div class="bento-icon">
               <img src="assets/svg/cog-8-tooth.svg" alt="Automation engine icon" width="28" height="28" class="icon-gold" />
             </div>
-            <h3 class="bento-title">Automation Engine</h3>
-            <p class="bento-desc">Build complex multi-step workflows with zero code. Drag, connect, deploy — your automation runs 24/7 without intervention.</p>
             <div class="bento-tag">Core Feature</div>
+            <h3 class="bento-title">Automation Engine</h3>
+            <p class="bento-desc">Build complex workflows with zero code. Drag, connect, deploy.</p>
+            <ul class="bento-bullets">
+              <li>Visual drag-and-drop builder</li>
+              <li>Conditional logic & branching</li>
+              <li>Auto-retry on failure</li>
+            </ul>
           </div>
 
-          <div class="bento-card bento-tall" data-index="1" tabindex="0">
-            <div class="bento-icon">
-              <img src="assets/svg/chart-pie.svg" alt="Analytics icon" width="28" height="28" class="icon-gold" />
-            </div>
-            <h3 class="bento-title">Real-Time Analytics</h3>
-            <p class="bento-desc">Live dashboards with sub-second refresh. Track KPIs as they happen.</p>
-            <div class="bento-tag">Analytics</div>
-          </div>
-
-          <div class="bento-card" data-index="2" tabindex="0">
-            <div class="bento-icon">
-              <img src="assets/svg/link-solid.svg" alt="Integrations icon" width="28" height="28" class="icon-gold-solid" />
-            </div>
-            <h3 class="bento-title">500+ Integrations</h3>
-            <p class="bento-desc">Connect every tool in your stack instantly.</p>
-            <div class="bento-tag">Connectivity</div>
-          </div>
-
-          <div class="bento-card" data-index="3" tabindex="0">
-            <div class="bento-icon">
-              <img src="assets/svg/arrow-path.svg" alt="Sync icon" width="28" height="28" class="icon-gold" />
-            </div>
-            <h3 class="bento-title">Data Sync</h3>
-            <p class="bento-desc">Bi-directional sync across all sources at 2.4M records/sec.</p>
-            <div class="bento-tag">Performance</div>
-          </div>
-
-          <div class="bento-card bento-wide" data-index="4" tabindex="0">
-            <div class="bento-icon">
-              <img src="assets/svg/arrow-trending-up.svg" alt="Growth icon" width="28" height="28" class="icon-gold" />
-            </div>
-            <h3 class="bento-title">Predictive Intelligence</h3>
-            <p class="bento-desc">ML models that forecast trends, detect anomalies, and surface insights before problems arise — keeping you always one step ahead.</p>
-            <div class="bento-tag">AI / ML</div>
-          </div>
-
-          <div class="bento-card" data-index="5" tabindex="0">
-            <div class="bento-icon">
-              <img src="assets/svg/cube-16-solid.svg" alt="Platform icon" width="28" height="28" class="icon-gold-solid" />
-            </div>
-            <h3 class="bento-title">Modular Platform</h3>
-            <p class="bento-desc">Pick only what you need. Scale modules independently.</p>
-            <div class="bento-tag">Architecture</div>
-          </div>
-
-        </div>
-
-        <!-- ACCORDION mobile -->
-        <div class="features-accordion" id="featuresAccordion">
-
-          <div class="acc-item" data-index="0">
-            <button class="acc-trigger" aria-expanded="false">
-              <span class="acc-trigger-left">
-                <img src="assets/svg/cog-8-tooth.svg" alt="" width="18" height="18" class="icon-gold" aria-hidden="true" />
-                Automation Engine
-              </span>
-              <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
-            </button>
-            <div class="acc-body">
-              <p>Build complex multi-step workflows with zero code. Drag, connect, deploy — your automation runs 24/7 without intervention.</p>
-            </div>
-          </div>
-
-          <div class="acc-item" data-index="1">
-            <button class="acc-trigger" aria-expanded="false">
-              <span class="acc-trigger-left">
-                <img src="assets/svg/chart-pie.svg" alt="" width="18" height="18" class="icon-gold" aria-hidden="true" />
-                Real-Time Analytics
-              </span>
-              <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
-            </button>
-            <div class="acc-body">
-              <p>Live dashboards with sub-second refresh. Track KPIs as they happen.</p>
-            </div>
-          </div>
-
-          <div class="acc-item" data-index="2">
-            <button class="acc-trigger" aria-expanded="false">
-              <span class="acc-trigger-left">
-                <img src="assets/svg/link-solid.svg" alt="" width="18" height="18" class="icon-gold-solid" aria-hidden="true" />
-                500+ Integrations
-              </span>
-              <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
-            </button>
-            <div class="acc-body">
-              <p>Connect every tool in your stack instantly.</p>
-            </div>
-          </div>
-
-          <div class="acc-item" data-index="3">
-            <button class="acc-trigger" aria-expanded="false">
-              <span class="acc-trigger-left">
-                <img src="assets/svg/arrow-path.svg" alt="" width="18" height="18" class="icon-gold" aria-hidden="true" />
-                Data Sync
-              </span>
-              <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
-            </button>
-            <div class="acc-body">
-              <p>Bi-directional sync across all sources at 2.4M records/sec.</p>
-            </div>
-          </div>
-
-          <div class="acc-item" data-index="4">
-            <button class="acc-trigger" aria-expanded="false">
-              <span class="acc-trigger-left">
-                <img src="assets/svg/arrow-trending-up.svg" alt="" width="18" height="18" class="icon-gold" aria-hidden="true" />
-                Predictive Intelligence
-              </span>
-              <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
-            </button>
-            <div class="acc-body">
-              <p>ML models that forecast trends, detect anomalies, and surface insights before problems arise.</p>
-            </div>
-          </div>
-
-          <div class="acc-item" data-index="5">
-            <button class="acc-trigger" aria-expanded="false">
-              <span class="acc-trigger-left">
-                <img src="assets/svg/cube-16-solid.svg" alt="" width="18" height="18" class="icon-gold-solid" aria-hidden="true" />
-                Modular Platform
-              </span>
-              <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
-            </button>
-            <div class="acc-body">
-              <p>Pick only what you need. Scale modules independently.</p>
+          <!-- Right: product mockup -->
+          <div class="bento-mockup" aria-hidden="true">
+            <div class="mockup-window">
+              <div class="mockup-titlebar">
+                <span class="mockup-dot red"></span>
+                <span class="mockup-dot yellow"></span>
+                <span class="mockup-dot green"></span>
+                <span class="mockup-title">Pipeline Builder</span>
+              </div>
+              <div class="mockup-body">
+                <!-- Pipeline nodes -->
+                <div class="pipeline-row">
+                  <div class="pipe-node active">
+                    <img src="assets/svg/cube-16-solid.svg" width="12" height="12" alt="" class="icon-gold-solid" />
+                    <span>Data Source</span>
+                  </div>
+                  <div class="pipe-arrow">→</div>
+                  <div class="pipe-node">
+                    <img src="assets/svg/cog-8-tooth.svg" width="12" height="12" alt="" class="icon-gold" />
+                    <span>Transform</span>
+                  </div>
+                  <div class="pipe-arrow">→</div>
+                  <div class="pipe-node success">
+                    <img src="assets/svg/arrow-trending-up.svg" width="12" height="12" alt="" class="icon-gold" />
+                    <span>Output</span>
+                  </div>
+                </div>
+                <!-- Stats row -->
+                <div class="mockup-stats">
+                  <div class="mockup-stat">
+                    <span class="mstat-val">1,284</span>
+                    <span class="mstat-label">Records</span>
+                  </div>
+                  <div class="mockup-stat">
+                    <span class="mstat-val">0.3s</span>
+                    <span class="mstat-label">Latency</span>
+                  </div>
+                  <div class="mockup-stat">
+                    <span class="mstat-val">100%</span>
+                    <span class="mstat-label">Success</span>
+                  </div>
+                </div>
+                <!-- Log lines -->
+                <div class="mockup-log">
+                  <div class="log-line"><span class="log-time">09:42:01</span><span class="log-msg success-text">Pipeline started</span></div>
+                  <div class="log-line"><span class="log-time">09:42:01</span><span class="log-msg">Fetching source data...</span></div>
+                  <div class="log-line"><span class="log-time">09:42:02</span><span class="log-msg success-text">Transform complete</span></div>
+                  <div class="log-line"><span class="log-time">09:42:02</span><span class="log-msg">Writing to output...</span></div>
+                </div>
+              </div>
             </div>
           </div>
 
         </div>
       </div>
-    </section>
+
+      <div class="bento-card bento-tall" data-index="1" tabindex="0" style="--delay:80ms">
+        <div class="bento-card-bg bg-analytics"></div>
+        <div class="bento-content">
+          <div class="bento-icon">
+            <img src="assets/svg/chart-pie.svg" alt="Analytics icon" width="28" height="28" class="icon-gold" />
+          </div>
+          <div class="bento-tag">Analytics</div>
+          <h3 class="bento-title">Real-Time Analytics</h3>
+          <p class="bento-desc">Live dashboards with sub-second refresh. Track KPIs as they happen.</p>
+          <ul class="bento-bullets">
+            <li>Sub-second data refresh</li>
+            <li>Custom KPI widgets</li>
+            <li>Export to CSV/PDF</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bento-card" data-index="2" tabindex="0" style="--delay:160ms">
+        <div class="bento-card-bg bg-integrations"></div>
+        <div class="bento-content">
+          <div class="bento-icon">
+            <img src="assets/svg/link-solid.svg" alt="Integrations icon" width="28" height="28" class="icon-gold-solid" />
+          </div>
+          <div class="bento-tag">Connectivity</div>
+          <h3 class="bento-title">500+ Integrations</h3>
+          <p class="bento-desc">Connect every tool in your stack instantly.</p>
+          <ul class="bento-bullets">
+            <li>Salesforce, HubSpot, Slack</li>
+            <li>REST & GraphQL APIs</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bento-card" data-index="3" tabindex="0" style="--delay:240ms">
+        <div class="bento-card-bg bg-sync"></div>
+        <div class="bento-content">
+          <div class="bento-icon">
+            <img src="assets/svg/arrow-path.svg" alt="Sync icon" width="28" height="28" class="icon-gold" />
+          </div>
+          <div class="bento-tag">Performance</div>
+          <h3 class="bento-title">Data Sync</h3>
+          <p class="bento-desc">Bi-directional sync across all sources at 2.4M records/sec.</p>
+          <ul class="bento-bullets">
+            <li>Zero-downtime migrations</li>
+            <li>Conflict resolution engine</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bento-card bento-wide" data-index="4" tabindex="0" style="--delay:320ms">
+        <div class="bento-card-bg bg-ml"></div>
+        <div class="bento-content">
+          <div class="bento-icon">
+            <img src="assets/svg/arrow-trending-up.svg" alt="Growth icon" width="28" height="28" class="icon-gold" />
+          </div>
+          <div class="bento-tag">AI / ML</div>
+          <h3 class="bento-title">Predictive Intelligence</h3>
+          <p class="bento-desc">ML models that forecast trends, detect anomalies, and surface insights before problems arise — keeping you always one step ahead.</p>
+          <ul class="bento-bullets">
+            <li>Anomaly detection alerts</li>
+            <li>Trend forecasting engine</li>
+            <li>Custom model training</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bento-card" data-index="5" tabindex="0" style="--delay:400ms">
+        <div class="bento-card-bg bg-modular"></div>
+        <div class="bento-content">
+          <div class="bento-icon">
+            <img src="assets/svg/cube-16-solid.svg" alt="Platform icon" width="28" height="28" class="icon-gold-solid" />
+          </div>
+          <div class="bento-tag">Architecture</div>
+          <h3 class="bento-title">Modular Platform</h3>
+          <p class="bento-desc">Pick only what you need. Scale modules independently.</p>
+          <ul class="bento-bullets">
+            <li>Pay per module</li>
+            <li>Independent scaling</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ACCORDION mobile -->
+    <div class="features-accordion" id="featuresAccordion">
+      <div class="acc-item" data-index="0">
+        <button class="acc-trigger" aria-expanded="false">
+          <span class="acc-trigger-left">
+            <img src="assets/svg/cog-8-tooth.svg" alt="" width="18" height="18" class="icon-gold" aria-hidden="true" />
+            Automation Engine
+          </span>
+          <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
+        </button>
+        <div class="acc-body">
+          <p>Build complex multi-step workflows with zero code. Visual drag-and-drop builder, conditional logic, auto-retry on failure. Runs 24/7 without intervention.</p>
+        </div>
+      </div>
+      <div class="acc-item" data-index="1">
+        <button class="acc-trigger" aria-expanded="false">
+          <span class="acc-trigger-left">
+            <img src="assets/svg/chart-pie.svg" alt="" width="18" height="18" class="icon-gold" aria-hidden="true" />
+            Real-Time Analytics
+          </span>
+          <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
+        </button>
+        <div class="acc-body">
+          <p>Live dashboards with sub-second refresh. Custom KPI widgets, export to CSV/PDF, track everything as it happens.</p>
+        </div>
+      </div>
+      <div class="acc-item" data-index="2">
+        <button class="acc-trigger" aria-expanded="false">
+          <span class="acc-trigger-left">
+            <img src="assets/svg/link-solid.svg" alt="" width="18" height="18" class="icon-gold-solid" aria-hidden="true" />
+            500+ Integrations
+          </span>
+          <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
+        </button>
+        <div class="acc-body">
+          <p>Connect Salesforce, HubSpot, Slack and 500+ more tools. REST & GraphQL API support built in.</p>
+        </div>
+      </div>
+      <div class="acc-item" data-index="3">
+        <button class="acc-trigger" aria-expanded="false">
+          <span class="acc-trigger-left">
+            <img src="assets/svg/arrow-path.svg" alt="" width="18" height="18" class="icon-gold" aria-hidden="true" />
+            Data Sync
+          </span>
+          <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
+        </button>
+        <div class="acc-body">
+          <p>Bi-directional sync at 2.4M records/sec. Zero-downtime migrations with conflict resolution engine.</p>
+        </div>
+      </div>
+      <div class="acc-item" data-index="4">
+        <button class="acc-trigger" aria-expanded="false">
+          <span class="acc-trigger-left">
+            <img src="assets/svg/arrow-trending-up.svg" alt="" width="18" height="18" class="icon-gold" aria-hidden="true" />
+            Predictive Intelligence
+          </span>
+          <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
+        </button>
+        <div class="acc-body">
+          <p>ML models that forecast trends, detect anomalies. Custom model training, real-time alerts.</p>
+        </div>
+      </div>
+      <div class="acc-item" data-index="5">
+        <button class="acc-trigger" aria-expanded="false">
+          <span class="acc-trigger-left">
+            <img src="assets/svg/cube-16-solid.svg" alt="" width="18" height="18" class="icon-gold-solid" aria-hidden="true" />
+            Modular Platform
+          </span>
+          <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light acc-chevron" aria-hidden="true" />
+        </button>
+        <div class="acc-body">
+          <p>Pay per module, scale independently. Pick exactly what your team needs — nothing more.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  
+
+</section>
 
     <!-- ========== PRICING ========== -->
     <section id="pricing" aria-label="Pricing section">
@@ -507,6 +642,80 @@
 
         </div>
       </div>
+      <!-- ========== FAQ ========== -->
+<section id="faq" aria-label="Frequently asked questions">
+  <div class="container-xl py-5">
+    <div class="faq-wrap">
+      <div class="text-center mb-4">
+        <p class="section-label">Got Questions?</p>
+        <h2 class="section-title">Frequently Asked <span class="text-forsythia">Questions</span></h2>
+      </div>
+      <div class="faq-grid">
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span>How quickly can I get started?</span>
+            <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light faq-chevron" aria-hidden="true" />
+          </button>
+          <div class="faq-body">
+            <p>You can connect your first data source and run your first automation in under 10 minutes. No engineering team required — our visual builder guides you through setup step by step.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span>Do I need technical skills to use Veridian?</span>
+            <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light faq-chevron" aria-hidden="true" />
+          </button>
+          <div class="faq-body">
+            <p>Not at all. Veridian is built for both technical and non-technical users. The drag-and-drop automation builder requires zero coding. For advanced users, we also offer a full API and SDK.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span>How does the annual discount work?</span>
+            <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light faq-chevron" aria-hidden="true" />
+          </button>
+          <div class="faq-body">
+            <p>Switch to annual billing and save 20% across all plans. The discount is applied automatically — just toggle to Annual on the pricing section and you'll see the updated rates instantly.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span>Is my data secure?</span>
+            <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light faq-chevron" aria-hidden="true" />
+          </button>
+          <div class="faq-body">
+            <p>Yes. Veridian is SOC 2 Type II certified with end-to-end encryption at rest and in transit. Your data never leaves your designated region. Enterprise plans include dedicated infrastructure.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span>Can I cancel anytime?</span>
+            <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light faq-chevron" aria-hidden="true" />
+          </button>
+          <div class="faq-body">
+            <p>Absolutely. No lock-ins, no cancellation fees. Cancel from your dashboard at any time. Your data remains exportable for 30 days after cancellation.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span>What integrations are supported?</span>
+            <img src="assets/svg/chevron-down.svg" alt="" width="18" height="18" class="icon-light faq-chevron" aria-hidden="true" />
+          </button>
+          <div class="faq-body">
+            <p>We support 500+ integrations including Salesforce, HubSpot, Slack, Notion, Google Sheets, AWS, Azure, and all major databases. Custom integrations via REST API are available on Pro and Enterprise.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
     </section>
 
     <!-- ========== FOOTER ========== -->
