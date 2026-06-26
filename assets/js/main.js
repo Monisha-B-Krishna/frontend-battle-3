@@ -56,3 +56,47 @@ window.addEventListener('resize', () => {
   }
   wasMobile = isMobile;
 });
+
+// =============================================
+// PRICING MATRIX — Feature 1
+// =============================================
+const pricingMatrix = {
+  USD: { symbol: '$', tariff: 1.00,    tiers: { starter: 29,  pro: 79,  enterprise: 199 } },
+  INR: { symbol: '₹', tariff: 83.5,   tiers: { starter: 29,  pro: 79,  enterprise: 199 } },
+  EUR: { symbol: '€', tariff: 0.92,   tiers: { starter: 29,  pro: 79,  enterprise: 199 } },
+};
+
+const ANNUAL_DISCOUNT = 0.8;
+
+let currentBilling  = 'monthly';
+let currentCurrency = 'USD';
+
+function updatePrices() {
+  const config   = pricingMatrix[currentCurrency];
+  const discount = currentBilling === 'annual' ? ANNUAL_DISCOUNT : 1;
+
+  const tiers = ['starter', 'pro', 'enterprise'];
+  tiers.forEach(tier => {
+    const base  = config.tiers[tier];
+    const final = Math.round(base * config.tariff * discount);
+
+    // Isolate update to text nodes only — no parent reflow
+    document.getElementById('sym-' + tier).textContent = config.symbol;
+    document.getElementById('val-' + tier).textContent = final.toLocaleString();
+  });
+}
+
+function setBilling(cycle) {
+  currentBilling = cycle;
+  document.getElementById('btnMonthly').classList.toggle('active', cycle === 'monthly');
+  document.getElementById('btnAnnual').classList.toggle('active',  cycle === 'annual');
+  updatePrices();
+}
+
+function setCurrency(currency) {
+  currentCurrency = currency;
+  updatePrices();
+}
+
+// Init on load
+updatePrices();

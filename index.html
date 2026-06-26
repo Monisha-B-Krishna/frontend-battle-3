@@ -338,7 +338,107 @@
   </div>
 </section>
 
-    <!-- PRICING will go here -->
+    <!-- ========== PRICING ========== -->
+<section id="pricing" aria-label="Pricing section">
+  <div class="container-xl py-5">
+
+    <div class="text-center mb-5">
+      <p class="section-label">Simple Pricing</p>
+      <h2 class="section-title">Choose Your <span class="text-forsythia">Growth Plan</span></h2>
+      <p class="section-subtitle">Scale as you grow. No hidden fees. Cancel anytime.</p>
+    </div>
+
+    <!-- Controls -->
+    <div class="pricing-controls">
+
+      <!-- Billing Toggle -->
+      <div class="billing-toggle" role="group" aria-label="Billing cycle">
+        <button class="toggle-btn active" id="btnMonthly" onclick="setBilling('monthly')">Monthly</button>
+        <button class="toggle-btn" id="btnAnnual" onclick="setBilling('annual')">
+          Annual
+          <span class="save-badge">Save 20%</span>
+        </button>
+      </div>
+
+      <!-- Currency Selector -->
+      <div class="currency-selector">
+        <img src="assets/svg/chevron-down.svg" alt="" width="14" height="14" class="icon-light" aria-hidden="true" />
+        <select id="currencySelect" onchange="setCurrency(this.value)" aria-label="Select currency">
+          <option value="USD">$ USD</option>
+          <option value="INR">₹ INR</option>
+          <option value="EUR">€ EUR</option>
+        </select>
+      </div>
+
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="row g-4 justify-content-center mt-2">
+
+      <!-- Starter -->
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-card">
+          <div class="pricing-tier">Starter</div>
+          <div class="pricing-amount">
+            <span class="price-symbol" id="sym-starter"></span><span class="price-value" id="val-starter"></span><span class="price-period">/mo</span>
+          </div>
+          <p class="pricing-desc">Perfect for individuals and small teams getting started with AI automation.</p>
+          <ul class="pricing-features">
+            <li><img src="assets/svg/arrow-trending-up.svg" alt="" width="16" height="16" class="icon-gold" aria-hidden="true" /> 5 Automation Pipelines</li>
+            <li><img src="assets/svg/arrow-trending-up.svg" alt="" width="16" height="16" class="icon-gold" aria-hidden="true" /> 10K Records / month</li>
+            <li><img src="assets/svg/arrow-trending-up.svg" alt="" width="16" height="16" class="icon-gold" aria-hidden="true" /> Basic Analytics</li>
+            <li><img src="assets/svg/arrow-trending-up.svg" alt="" width="16" height="16" class="icon-gold" aria-hidden="true" /> Email Support</li>
+            <li class="excluded"><img src="assets/svg/x-mark.svg" alt="" width="16" height="16" class="icon-muted" aria-hidden="true" /> Advanced ML Models</li>
+            <li class="excluded"><img src="assets/svg/x-mark.svg" alt="" width="16" height="16" class="icon-muted" aria-hidden="true" /> Priority Support</li>
+          </ul>
+          <a href="#" class="btn-outline-custom w-100 text-center d-block">Get Started</a>
+        </div>
+      </div>
+
+      <!-- Pro (Featured) -->
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-card pricing-featured">
+          <div class="pricing-popular">Most Popular</div>
+          <div class="pricing-tier">Pro</div>
+          <div class="pricing-amount">
+            <span class="price-symbol" id="sym-pro"></span><span class="price-value" id="val-pro"></span><span class="price-period">/mo</span>
+          </div>
+          <p class="pricing-desc">For growing teams that need advanced automation and deep analytics.</p>
+          <ul class="pricing-features">
+            <li><img src="assets/svg/arrow-trending-up.svg" alt="" width="16" height="16" class="icon-gold" aria-hidden="true" /> Unlimited Pipelines</li>
+            <li><img src="assets/svg/arrow-trending-up.svg" alt="" width="16" height="16" class="icon-gold" aria-hidden="true" /> 1M Records / month</li>
+            <li><img src="assets/svg/arrow-trending-up.svg" alt="" width="16" height="16" class="icon-gold" aria-hidden="true" /> Advanced Analytics</li>
+            <li><img src="assets/svg/arrow-trending-up.svg" alt="" width="16" height="16" class="icon-gold" aria-hidden="true" /> Advanced ML Models</li>
+            <li><img src="assets/svg/arrow-trending-up.svg" alt="" width="16" height="16" class="icon-gold" aria-hidden="true" /> Priority Support</li>
+            <li><img src="assets/svg/arrow-trending-up.svg" alt="" width="16" height="16" class="icon-gold" aria-hidden="true" /> Team Collaboration</li>
+          </ul>
+          <a href="#" class="btn-primary-custom w-100 text-center d-block">Start Free Trial</a>
+        </div>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-card">
+          <div class="pricing-tier">Enterprise</div>
+          <div class="pricing-amount">
+            <span class="price-symbol" id="sym-enterprise"></span><span class="price-value" id="val-enterprise"></span><span class="price-period">/mo</span>
+          </div>
+          <p class="pricing-desc">For large organizations requiring custom solutions and dedicated infrastructure.</p>
+          <ul class="pricing-features">
+            <li><img src="assets/svg/arrow-trending-up.svg" alt="" width="16" height="16" class="icon-gold" aria-hidden="true" /> Everything in Pro</li>
+            <li><img src="assets/svg/arrow-trending-up.svg" alt="" width="16" height="16" class="icon-gold" aria-hidden="true" /> Unlimited Records</li>
+            <li><img src="assets/svg/arrow-trending-up.svg" alt="" width="16" height="16" class="icon-gold" aria-hidden="true" /> Custom ML Models</li>
+            <li><img src="assets/svg/arrow-trending-up.svg" alt="" width="16" height="16" class="icon-gold" aria-hidden="true" /> Dedicated Infrastructure</li>
+            <li><img src="assets/svg/arrow-trending-up.svg" alt="" width="16" height="16" class="icon-gold" aria-hidden="true" /> 24/7 Dedicated Support</li>
+            <li><img src="assets/svg/arrow-trending-up.svg" alt="" width="16" height="16" class="icon-gold" aria-hidden="true" /> SLA Guarantee</li>
+          </ul>
+          <a href="#" class="btn-outline-custom w-100 text-center d-block">Contact Sales</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <!-- SOCIAL PROOF will go here -->
 
