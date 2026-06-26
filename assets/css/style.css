@@ -1,0 +1,102 @@
+/* =============================================
+   CSS VARIABLES — COLOR PALETTE
+   ============================================= */
+:root {
+  --arctic-powder: #F1F6F4;
+  --mystic-mint: #D9E8E2;
+  --forsythia: #FFC801;
+  --deep-saffron: #FF9932;
+  --nocturnal: #114C5A;
+  --oceanic-noir: #172B36;
+
+  --font-heading: 'JetBrains Mono', monospace;
+  --font-body: 'Inter', sans-serif;
+
+  --transition-micro: 175ms ease-out;
+  --transition-layout: 350ms ease-in-out;
+}
+
+/* =============================================
+   BASE RESET
+   ============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--oceanic-noir);
+  color: var(--arctic-powder);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* =============================================
+   UTILITY CLASSES
+   ============================================= */
+.text-forsythia { color: var(--forsythia); }
+.text-saffron   { color: var(--deep-saffron); }
+.text-mint      { color: var(--mystic-mint); }
+.bg-nocturnal   { background-color: var(--nocturnal); }
+.bg-noir        { background-color: var(--oceanic-noir); }
+
+.btn-primary-custom {
+  background: linear-gradient(135deg, var(--forsythia), var(--deep-saffron));
+  color: var(--oceanic-noir);
+  font-family: var(--font-body);
+  font-weight: 600;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  transition: opacity var(--transition-micro), transform var(--transition-micro);
+  cursor: pointer;
+}
+
+.btn-primary-custom:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: var(--forsythia);
+  font-family: var(--font-body);
+  font-weight: 500;
+  border: 1.5px solid var(--forsythia);
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  transition: background var(--transition-micro), color var(--transition-micro);
+  cursor: pointer;
+}
+
+.btn-outline-custom:hover {
+  background: var(--forsythia);
+  color: var(--oceanic-noir);
+}
+
+/* SVG icon color helper */
+.icon-light path,
+.icon-light circle,
+.icon-light rect {
+  stroke: var(--arctic-powder);
+}
+
+.icon-gold path,
+.icon-gold circle {
+  stroke: var(--forsythia);
+  fill: none;
+}
+
+.icon-gold-solid path {
+  fill: var(--forsythia);
+  stroke: none;
+}
