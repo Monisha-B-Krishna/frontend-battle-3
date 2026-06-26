@@ -100,3 +100,21 @@ function setCurrency(currency) {
 
 // Init on load
 updatePrices();
+
+// =============================================
+// SECTION ENTRANCE ANIMATIONS (Intersection Observer)
+// =============================================
+const animateSections = document.querySelectorAll('section, footer');
+
+animateSections.forEach(el => el.classList.add('section-animate'));
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
+
+animateSections.forEach(el => observer.observe(el));

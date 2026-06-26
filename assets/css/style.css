@@ -1031,3 +1031,99 @@ footer {
 .scroll-top:hover {
   background: rgba(255,200,1,0.2);
 }
+
+/* =============================================
+   PHASE 4 — POLISH
+   ============================================= */
+
+/* Smooth scroll already set on html — confirmed */
+
+/* Section entrance animations */
+.section-animate {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+}
+
+.section-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button hover polish */
+.btn-primary-custom:active {
+  transform: scale(0.97);
+}
+
+.btn-outline-custom:active {
+  transform: scale(0.97);
+}
+
+/* Pricing card hover glow */
+.pricing-featured:hover {
+  box-shadow: 0 0 32px rgba(255, 200, 1, 0.12);
+}
+
+/* Testimonial hover glow */
+.testimonial-featured:hover {
+  box-shadow: 0 0 24px rgba(255, 200, 1, 0.1);
+}
+
+/* Bento card active glow */
+.bento-card.active {
+  box-shadow: 0 0 24px rgba(255, 200, 1, 0.08);
+}
+
+/* =============================================
+   RESPONSIVE POLISH
+   ============================================= */
+@media (max-width: 991px) {
+  .hero-visual {
+    width: 320px;
+    height: 360px;
+  }
+
+  .hero-card-main { width: 240px; }
+  .hero-card-secondary { width: 190px; }
+  .hero-card-tertiary { width: 180px; }
+
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bento-large,
+  .bento-wide { grid-column: span 2; }
+  .bento-tall { grid-row: span 1; }
+}
+
+@media (max-width: 767px) {
+  .hero-content { padding-top: 7rem; }
+
+  .hero-title { font-size: 2rem; }
+
+  .hero-visual {
+    width: 280px;
+    height: 320px;
+    margin: 2rem auto 0;
+  }
+
+  .hero-card-main { width: 210px; }
+  .hero-card-secondary { width: 170px; }
+  .hero-card-tertiary { width: 160px; }
+
+  .hero-stats { gap: 1rem; }
+
+  .stat-number { font-size: 1.3rem; }
+
+  .section-title { font-size: 1.6rem; }
+
+  .pricing-controls { flex-direction: column; gap: 1rem; }
+
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  .hero-actions { flex-direction: column; }
+  .hero-actions a { text-align: center; }
+  .logo-strip { gap: 1.5rem; }
+}
